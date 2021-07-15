@@ -6,7 +6,7 @@ import json
 
 project = os.environ['INPUT_PROJECT']
 environment = os.environ['INPUT_ENVIRONMENT']
-status = os.environ['INPUT_STATUS']
+result = os.environ['INPUT_RESULT']
 author = os.environ['INPUT_AUTHOR']
 hookUrl = os.environ['INPUT_WEBHOOK']
 departure = os.environ['INPUT_DEPARTURE']
@@ -15,13 +15,13 @@ color = 'ffffff'
 statusText = ''
 destination = ''
 
-if status == 'success':
+if result == 'success':
     color = '34795D'
     statusText = '*Succeed*'
-elif status == 'failure':
+elif result == 'failure':
     color = 'ff0000'
     statusText = '*Failed*'
-elif status == 'cancelled':
+elif result == 'cancelled':
     color = 'cccccc'
     statusText = '*Cancelled*'
 else:

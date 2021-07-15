@@ -11,7 +11,7 @@ inputs:
     required: true
     description: Stage Environment (staging, production)
     default: 'staging'
-  status:
+  result:
     required: true
     description: Deploying result (success, failure, cancelled)
   author:
