@@ -15,12 +15,15 @@ color = 'ffffff'
 statusText = ''
 destination = ''
 
-if status == True:
+if status == 'success':
     color = '34795D'
     statusText = '*Succeed*'
-elif status == False:
+elif status == 'failure':
     color = 'ff0000'
     statusText = '*Failed*'
+elif status == 'cancelled':
+    color = 'cccccc'
+    statusText = '*Cancelled*'
 else:
     color = 'ffffff'
     statusText = '*Undetermined*'
