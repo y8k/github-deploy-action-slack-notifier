@@ -13,5 +13,5 @@ jobs:
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           environment: 'staging'
           result: ${{ job.status }}
-          author: ${{ job.author }}
-          departure: ${{ github.head_ref }}
+          author: ${{ github.event.pull_request_user.login }}
+          departure: ${{ github.event.pull_request.title }}
