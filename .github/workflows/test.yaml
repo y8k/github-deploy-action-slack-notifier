@@ -13,5 +13,5 @@ jobs:
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           environment: 'staging'
           result: ${{ job.status }}
-          author: 'y8k'
+          author: ${{ job.author }}
           departure: 'feature/test'
