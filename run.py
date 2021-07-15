@@ -4,12 +4,12 @@ import os
 import requests
 import json
 
-project = os.environ['project']
-environment = os.environ['environment']
+project = os.environ['INPUT_PROJECT']
+environment = os.environ['INPUT_ENVIRONMENT']
 status = True
-author = os.environ['author']
-hookUrl = os.environ['webhook'] #'https://hooks.slack.com/services/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'
-departure = os.environ['departure']
+author = os.environ['INPUT_AUTHOR']
+hookUrl = os.environ['INPUT_WEBHOOK'] #'https://hooks.slack.com/services/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'
+departure = os.environ['INPUT_DEPARTURE']
 
 color = 'ffffff'
 statusText = ''
