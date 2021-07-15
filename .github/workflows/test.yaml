@@ -1,0 +1,17 @@
+name: Test 
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Action
+        uses: ./
+        with:
+          project: 'Test Project'
+          webhook: 'https://hooks.slack.com/services/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'
+          environment: 'staging'
+          status: true
+          author: 'y8k'
+          departure: 'feature/test'
