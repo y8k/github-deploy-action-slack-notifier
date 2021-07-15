@@ -1,5 +1,7 @@
 name: Test 
-on: push
+on:
+  pull_request:
+    types: [opened, ready_for_review, closed]
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -13,5 +15,5 @@ jobs:
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           environment: 'staging'
           result: ${{ job.status }}
-          author: ${{ github.event.pull_request_user.login }}
+          author: ${{ github.event.pull_request.user.login }}
           departure: ${{ github.event.pull_request.title }}
