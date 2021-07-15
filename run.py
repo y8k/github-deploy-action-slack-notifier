@@ -11,6 +11,9 @@ author = os.environ['INPUT_AUTHOR']
 hookUrl = os.environ['INPUT_WEBHOOK']
 departure = os.environ['INPUT_DEPARTURE']
 
+
+print(f'result is {result}')
+
 color = 'ffffff'
 statusText = ''
 destination = ''
