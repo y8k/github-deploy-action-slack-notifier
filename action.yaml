@@ -1,0 +1,26 @@
+name: Slack Notifier for deploy
+description: After deploying to stage, notify result to slack
+inputs: 
+  project:
+    required: true
+    description: Name of Project
+  webhook:
+    required: true
+    description: Established webhook from slack
+  environment:
+    required: true
+    description: Stage Environment (staging, production)
+    default: 'staging'
+  status:
+    required: true
+    description: Deploying result as boolean
+  author:
+    required: false
+    description: Author
+  departure:
+    required: false
+    description: PR branch or Tag name
+
+runs:
+  using: docker
+  image: 'Dockerfile'
