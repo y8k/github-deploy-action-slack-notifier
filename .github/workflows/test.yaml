@@ -1,7 +1,7 @@
 name: Test 
 on:
   pull_request:
-    types: [opened, ready_for_review]
+    types: [opened, ready_for_review, closed]
 jobs:
   first-job:
     runs-on: ubuntu-latest
