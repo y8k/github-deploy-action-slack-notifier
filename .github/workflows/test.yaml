@@ -12,6 +12,6 @@ jobs:
           project: 'Test Project'
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           environment: 'staging'
-          status: true
+          status: false
           author: 'y8k'
           departure: 'feature/test'
