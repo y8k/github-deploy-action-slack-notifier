@@ -8,7 +8,7 @@ project = os.environ['INPUT_PROJECT']
 environment = os.environ['INPUT_ENVIRONMENT']
 status = True
 author = os.environ['INPUT_AUTHOR']
-hookUrl = os.environ['INPUT_WEBHOOK'] #'https://hooks.slack.com/services/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'
+hookUrl = os.environ['INPUT_WEBHOOK']
 departure = os.environ['INPUT_DEPARTURE']
 
 color = 'ffffff'
@@ -23,10 +23,8 @@ else:
     statusText = '*Failed*'
 
 if environment == 'staging':
-    departure = 'feature/aaaa' # PR branch name
     destination = 'develop'
 elif environment == 'production':
-    departure = '1.0.0' # Tags
     destination = 'main'
 else:
     departure = ''
@@ -65,8 +63,6 @@ context = {'type': 'context', 'elements': [{'type': 'mrkdwn', 'text': 'Check thi
 
 # Blocks
 blocks = [header, section, context]
-
-print(section)
 
 # Attachments
 attachments = {'attachments': [{'color': color, 'blocks': blocks}]}

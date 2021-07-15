@@ -10,7 +10,7 @@ jobs:
         uses: ./
         with:
           project: 'Test Project'
-          webhook: 'https://hooks.slack.com/services/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'
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
           environment: 'staging'
           status: true
           author: 'y8k'
