@@ -14,4 +14,4 @@ jobs:
           environment: 'staging'
           result: ${{ job.status }}
           author: ${{ job.author }}
-          departure: ${{ github.ref }}
+          departure: ${{ github.head_ref }}
