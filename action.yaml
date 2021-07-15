@@ -13,7 +13,7 @@ inputs:
     default: 'staging'
   status:
     required: true
-    description: Deploying result as boolean
+    description: Deploying result (success, failure, cancelled)
   author:
     required: false
     description: Author
