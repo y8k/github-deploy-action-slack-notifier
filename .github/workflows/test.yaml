@@ -13,7 +13,7 @@ jobs:
         with:
           project: 'Test Project'
           webhook: ${{ secrets.SLACK_WEBHOOK }}
-          environment: 'staging'
+          environment: 'test'
           result: ${{ job.status }}
           author: ${{ github.event.pull_request.user.login }}
           departure: ${{ github.event.pull_request.title }}
